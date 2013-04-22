@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/sbin/ntpdate br.pool.ntp.org
