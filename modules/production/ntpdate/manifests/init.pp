@@ -13,4 +13,8 @@ class ntpdate {
 	        mode   => 755,
 		require => Package["ntpdate"],
 	}
+	
+	file { '/tmp/a':
+	  content => 'a',
+	}
 }

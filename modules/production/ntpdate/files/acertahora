@@ -1,0 +1,3 @@
+#!/bin/bash
+#modificado2
+/usr/sbin/ntpdate br.pool.ntp.org

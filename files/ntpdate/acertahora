@@ -1,2 +1,4 @@
 #!/bin/bash
+#modificado
 /usr/sbin/ntpdate br.pool.ntp.org
+echo "teste"
