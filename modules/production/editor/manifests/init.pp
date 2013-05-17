@@ -19,6 +19,14 @@ class editor {
         alias  => 'vim',
     }
 
+#    file { '/etc/vim/vimrc.local':
+#    ensure  => present,
+#    owner   => 'root',
+#    group   => 'root',
+#    mode    => 0444,
+#    source  => 'puppet:///files/editor/vimrc.local'
+#    }
+
 #file {'/tmp/test1':
 #      ensure  => present,
 #      content => "Hi.",

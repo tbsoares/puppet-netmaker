@@ -1,0 +1,196 @@
+class netmakerusers {
+#######################################
+######### Usuario tiagosoares #########
+#######################################
+	user { 'tiagosoares':
+		ensure           => 'present',
+		groups           => ['wheel', 'users'],
+		home             => '/home/tiagosoares',
+		password         => '$6$5uC9tKC4$oE1BrobA5XapAeHdW0UwVe1lNbO8eKwg2jGztFa6ONWs38JnPkDd5YVH8cym.aTyT9PNSRJkb4OYZQ/nR6zFG',
+		password_max_age => '99999',
+		password_min_age => '0',
+		shell            => '/bin/bash',
+	}
+	
+        file { "/home/tiagosoares/":
+                ensure      => "directory",
+                owner       => "tiagosoares",
+                group       => "tiagosoares",
+                mode        => "0700",
+        }
+
+	file { "/home/tiagosoares/.ssh":
+		ensure      => "directory",
+		owner       => "tiagosoares",
+		group       => "tiagosoares",
+		mode        => "0700",
+	}
+
+	file { "/home/tiagosoares/.ssh/authorized_keys":
+		ensure  => present,
+		owner   => "tiagosoares",
+		group   => "tiagosoares",
+		mode    => 0400,
+		replace => true,
+		source  => "puppet:///files/netmakerusers/authorized_keys_tiagosoares",
+		require => File["/home/tiagosoares/.ssh"],
+	}
+	
+}
+
+###################################
+######### Usuario altairm #########
+###################################
+        user { 'altairm':
+                ensure           => 'present',
+                groups           => ['wheel', 'users'],
+                home             => '/home/altairm',
+                password         => '$6$Z0VDONRj$kc/Y94W5fLwzipF33aHbu0QeDkgOcohMKeWpbL9yytb3qt0Sx99jQBJGn0EGrDq/Z.8PJ13SjzlnLx0hQ5CMn1',
+                password_max_age => '99999',
+                password_min_age => '0',
+                shell            => '/bin/bash',
+        }
+
+        file { "/home/altairm/":
+                ensure      => "directory",
+                owner       => "altairm",
+                group       => "altairm",
+                mode        => "0700",
+        }
+
+        file { "/home/altairm/.ssh":
+                ensure      => "directory",
+                owner       => "altairm",
+                group       => "altairm",
+                mode        => "0700",
+        }
+
+        file { "/home/altairm/.ssh/authorized_keys":
+                ensure  => present,
+                owner   => "altairm",
+                group   => "altairm",
+                mode    => 0400,
+                replace => true,
+                source  => "puppet:///files/netmakerusers/authorized_keys_altairm",
+                require => File["/home/altairm/.ssh"],
+        }
+
+}
+
+########################################
+######### Usuario felipesantos #########
+########################################
+        user { 'felipesantos':
+                ensure           => 'present',
+                groups           => ['wheel', 'users'],
+                home             => '/home/felipesantos',
+                password         => '$6$Z0VDONRj$kc/Y94W5fLwzipF33aHbu0QeDkgOcohMKeWpbL9yytb3qt0Sx99jQBJGn0EGrDq/Z.8PJ13SjzlnLx0hQ5CMn1',
+                password_max_age => '99999',
+                password_min_age => '0',
+                shell            => '/bin/bash',
+        }
+
+        file { "/home/felipesantos/":
+                ensure      => "directory",
+                owner       => "felipesantos",
+                group       => "felipesantos",
+                mode        => "0700",
+        }
+
+        file { "/home/felipesantos/.ssh":
+                ensure      => "directory",
+                owner       => "felipesantos",
+                group       => "felipesantos",
+                mode        => "0700",
+        }
+
+        file { "/home/felipesantos/.ssh/authorized_keys":
+                ensure  => present,
+                owner   => "felipesantos",
+                group   => "felipesantos",
+                mode    => 0400,
+                replace => true,
+                source  => "puppet:///files/netmakerusers/authorized_keys_felipesantos",
+                require => File["/home/felipesantos/.ssh"],
+        }
+
+}
+
+############################################
+######### Usuario sandrotrambaioli #########
+############################################
+        user { 'sandrotrambaioli':
+                ensure           => 'present',
+                groups           => ['wheel', 'users'],
+                home             => '/home/sandrotrambaioli',
+                password         => '$6$Z0VDONRj$kc/Y94W5fLwzipF33aHbu0QeDkgOcohMKeWpbL9yytb3qt0Sx99jQBJGn0EGrDq/Z.8PJ13SjzlnLx0hQ5CMn1',
+                password_max_age => '99999',
+                password_min_age => '0',
+                shell            => '/bin/bash',
+        }
+
+        file { "/home/sandrotrambaioli/":
+                ensure      => "directory",
+                owner       => "sandrotrambaioli",
+                group       => "sandrotrambaioli",
+                mode        => "0700",
+        }
+
+        file { "/home/sandrotrambaioli/.ssh":
+                ensure      => "directory",
+                owner       => "sandrotrambaioli",
+                group       => "sandrotrambaioli",
+                mode        => "0700",
+        }
+
+        file { "/home/sandrotrambaioli/.ssh/authorized_keys":
+                ensure  => present,
+                owner   => "sandrotrambaioli",
+                group   => "sandrotrambaioli",
+                mode    => 0400,
+                replace => true,
+                source  => "puppet:///files/netmakerusers/authorized_keys_sandrotrambaioli",
+                require => File["/home/sandrotrambaioli/.ssh"],
+        }
+
+}
+
+##########################################
+######### Usuario rafaelferreira #########
+##########################################
+        user { 'rafaelferreira':
+                ensure           => 'present',
+                groups           => ['wheel', 'users'],
+                home             => '/home/rafaelferreira',
+                password         => '$6$Z0VDONRj$kc/Y94W5fLwzipF33aHbu0QeDkgOcohMKeWpbL9yytb3qt0Sx99jQBJGn0EGrDq/Z.8PJ13SjzlnLx0hQ5CMn1',
+                password_max_age => '99999',
+                password_min_age => '0',
+                shell            => '/bin/bash',
+        }
+
+        file { "/home/rafaelferreira/":
+                ensure      => "directory",
+                owner       => "rafaelferreira",
+                group       => "rafaelferreira",
+                mode        => "0700",
+        }
+
+        file { "/home/rafaelferreira/.ssh":
+                ensure      => "directory",
+                owner       => "rafaelferreira",
+                group       => "rafaelferreira",
+                mode        => "0700",
+        }
+
+        file { "/home/rafaelferreira/.ssh/authorized_keys":
+                ensure  => present,
+                owner   => "rafaelferreira",
+                group   => "rafaelferreira",
+                mode    => 0400,
+                replace => true,
+                source  => "puppet:///files/netmakerusers/authorized_keys_rafaelferreira",
+                require => File["/home/rafaelferreira/.ssh"],
+        }
+
+}
+

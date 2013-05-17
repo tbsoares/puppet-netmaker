@@ -1,0 +1,21 @@
+
+"
+" DO NOT CHANGE : IT WILL BE OVERRIDEN BY PUPPET ON THE NEXT RUN
+" GENERATED FROM puppet.vm.april-int:/etc/puppet/modules/vim/files/vimrc.local
+"
+set nocompatible
+syntax on
+
+" Edit options
+set paste
+set autoindent
+
+" UI options
+set background=dark
+set ruler
+set laststatus=2
+set showcmd
+
+" Search options
+set ignorecase
+set hlsearch

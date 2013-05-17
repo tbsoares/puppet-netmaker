@@ -1,0 +1,19 @@
+# Configure the Director which will manage this host's backups
+Director {
+	Name = "<%= nome_director -%>"
+	Password = "<%= senha_director -%>"
+}
+
+FileDaemon {
+	Name = "<%= hostname.split('.').first -%>"
+	FDport = <%= portaFD -%>
+
+	WorkingDirectory = /opt/bacula/working/ 
+	PID Directory = /var/run
+	Maximum Concurrent Jobs = 20
+}
+
+Messages {
+  Name = Standard
+  Director = "<%= nome_director -%>" = all, !skipped, !restored
+}

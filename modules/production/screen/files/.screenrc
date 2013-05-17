@@ -1,0 +1,8 @@
+#
+# DO NOT CHANGE : IT WILL BE OVERRIDEN BY PUPPET ON THE NEXT RUN
+# GENERATED FROM puppet.vm.april-int:/etc/puppet/modules/screen/files/.screenrc
+#
+escape ^^^[
+hardstatus on
+hardstatus alwayslastline
+hardstatus string "%{.bW}%-w%{.rW}%n %t%{-}%+w %=%{..G} %H %{..Y} %m/%d %C%a "
