@@ -5,4 +5,5 @@ node default {
 	include screen
 	include editor
 	include epel
+	include linux_servers
 }
