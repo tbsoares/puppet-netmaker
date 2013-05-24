@@ -3,7 +3,7 @@
 class accounts {
 	@accounts::virtual { 'tiagosoares':
 		realname        =>  'Tiago Soares - Netmaker',
-		pass            =>  '$6$5uC9tKC4$oE1BrobA5XapAeHdW0UwVe1lNbO8eKwg2jGztFa6ONWs38JnPkDd5YVH8cym.aTyT9PNSRJkb4OYZQ/nR6zFG',
+		pass            =>  '$6$PzMYClQj$B29EgkntT77DvDoJK3yBe1c0J3g66twSHXHDGlQ7V2CbX/JwguQvLmDJChvn5NzVx2TDoJ7iHMaQvqVE63bc0.',
 		grupo1		=>  'wheel',
 		grupo2		=> 'users',
 	}

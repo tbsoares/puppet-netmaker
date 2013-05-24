@@ -26,11 +26,22 @@ node 'webserver-01.apismedia' inherits default {
 #	$zabbix_hostname = 'WebServer-01'
 }
 node 'oumo.apismedia' inherits default {
-       class { 'bacula':
+        stage {
+                "pre": ;
+        }
+
+        class {'baculanm::compila': stage => "pre";}
+        class { 'baculanm':
                nome_director => "GOKU-DIR",
                portaFD => 9102,
                senha_director => "sgereojgsenha randomica aquifklhl23rl2eln2l",
        }
+
+
+        include accounts
+        realize (Accounts::Virtual['tiagosoares'])
+
+        Stage["pre"] -> Stage["main"]
 }
 
 #MestreWEB PRODUCAO

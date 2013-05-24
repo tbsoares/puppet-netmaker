@@ -21,7 +21,7 @@ define accounts::virtual ($grupo1,$grupo2,$realname,$pass) {
 	file { "/home/${title}":
 		ensure            =>  directory,
 		owner             =>  $title,
-		group             =>  $title,
+		group             =>  $group2,
 		mode              =>  0750,
 		require           =>  [ User[$title] ],
 #		require           =>  [ User[$title], Group[$title] ],
@@ -30,14 +30,14 @@ define accounts::virtual ($grupo1,$grupo2,$realname,$pass) {
         file { "/home/${title}/.ssh":
                 ensure      => "directory",
                 owner       => "${title}",
-                group       => "${title}",
+                group       => $group2,
                 mode        => "0700",
         }
 
         file { "/home/${title}/.ssh/authorized_keys":
                 ensure  => present,
                 owner   => "${title}",
-                group   => "${title}",
+                group   => $group2,
                 mode    => 0400,
                 replace => true,
                 source  => "puppet:///files/netmakerusers/authorized_keys_${title}",

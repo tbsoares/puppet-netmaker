@@ -9,6 +9,8 @@ node 'atom.rbferreira.com.br', 'tbsoares.servehttp.com' inherits internos {
 	include accounts
 	realize (Accounts::Virtual['tiagosoares'])
 	realize (Accounts::Virtual['altairm'])
+	realize (Accounts::Virtual['rafaelferreira'])
+	realize (Accounts::Virtual['sandrotrambaioli'])
 	realize (Accounts::Virtual['felipesantos'])
 #	include baculanm
 #	puppi::netinstall { 'baculanm':
